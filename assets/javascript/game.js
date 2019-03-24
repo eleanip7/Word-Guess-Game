@@ -2,8 +2,7 @@ var countryNames = ["brazil", "china", "Sweden", "Finaland"];
 var totalGueses = 10; // number of tries
 var lettersGuessed = []; //letters the user guessed
 var userGuess = []; // word picked to match current word
-var guessesRemaining = 0; // how many tries the user has left
-var displayedWord ="";
+var guessesRemaining = 0; // how many tries the user has lefr
 var wins = 0;
 var losses =0;
 var computerPick = selectWord();
@@ -21,7 +20,7 @@ function startGame () {
 computerPick = Math.floor(Math.random()* (countryNames.length));
 
 function displayStats() {
-    document.getElementById("wordDisplay").textContent = "CurrentWord: " + lettersGuessed;
+    document.getElementById("wordDisplay").textContent = "CurrentWord: " + userGuess;
     document.getElementById("lettersGuessed").textContent = "Guessed Letters: " + lettersGuessed;
     document.getElementById("guessesRemaining").textContent = "Guesses Remaining: " + guessesRemaining;
     document.getElementById("wins").textContent = "Wins: " + wins;
