@@ -1,12 +1,13 @@
 var countryNames = ["brazil", "china", "Sweden", "Finaland"];
 var totalGueses = 10; // number of tries
 var lettersGuessed = []; //letters the user guessed
-var computerPick; //computer random pick
-var wordGuessed = [] // word picked to match current word
+var userGuess = []; // word picked to match current word
 var guessesRemaining = 0; // how many tries the user has left
-var finishedGame = false; // "press key to try again"
+var displayedWord ="";
 var wins = 0;
 var losses =0;
+var computerPick = selectWord();
+var wordDiv = document.getElementById("wordDisplay");
 
 
 //user presses any key to start the game
@@ -20,11 +21,13 @@ function startGame () {
 computerPick = Math.floor(Math.random()* (countryNames.length));
 
 function displayStats() {
+    document.getElementById("wordDisplay").textContent = "CurrentWord: " + lettersGuessed;
     document.getElementById("lettersGuessed").textContent = "Guessed Letters: " + lettersGuessed;
     document.getElementById("guessesRemaining").textContent = "Guesses Remaining: " + guessesRemaining;
     document.getElementById("wins").textContent = "Wins: " + wins;
     document.getElementById("losses").textContent = "Losses: " + losses;
-}
+
+};
 
 if(countryNames[computerPick] == countryNames[0]) {
     document.getElementById ("brazil0").src = "assets/images/brazil.png";
@@ -43,10 +46,10 @@ else if (countryNames[computerPick] == countryNames[3]) {
 }
 
 userGuesses = [];
-wordGuessed = [];
+userGuess = [];
 
 for (var i=0; i < countryNames[computerPick].length; i++) {
-    wordGuessed.push(" __ ");
+    userGuess.push(" __ ");
 }
 
 document.getElementById("tryagain").style.cssText ="display: none;"
@@ -57,12 +60,20 @@ refreshScreen();
 
 function refreshScreen () {
 
+    document.getElementById("wordDisplay").textContent = "CurrentWord: " + lettersGuessed;
     document.getElementById("lettersGuessed").textContent = "Guessed Letters: " + lettersGuessed;
     document.getElementById("guessesRemaining").textContent = "Guesses Remaining: " + guessesRemaining;
     document.getElementById("wins").textContent = "Wins: " + wins;
     document.getElementById("losses").textContent = "Losses: " + losses;
 
 };
+
+
+setDisplayWord();
+
+document.onkeyup = function (event) {
+    var userGuess = event.key;
+}
 
 
 
