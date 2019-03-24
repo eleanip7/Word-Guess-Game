@@ -34,6 +34,8 @@ else if (countryNames[computerPick] == countryNames[3]) {
     document.getElementById ("sweden3").src = "assets/images/Sweden.png";
 }
 
+userGuesses = [];
+wordGuessed = [];
 
 for (var i=0; i < countryNames[computerPick].length; i++) {
     wordGuessed.push("__");
@@ -41,13 +43,13 @@ for (var i=0; i < countryNames[computerPick].length; i++) {
 
 document.getElementById("tryagain").style.cssText ="display: none;"
 
-
+refreshScreen();
 
 };
 
 function refreshScreen () {
 
-    document.getElementById('gamewins').innerText = wins;
+document.getElementById('gamewins').innerText = wins;
 
     var guessingWordText = "";
     for (var i=0; i < wordGuessed.length; i++) {
