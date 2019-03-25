@@ -1,50 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hangman!</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>Hangman</title>
 </head>
+
 <body>
-
- <header class="topcontent">
-
-    <h1 id="hangtitle">Country Name Hangman</h1>
-    <h1 id="tryagain">Press Any Key to Try Again</h1>
-
-
- </header> 
-
-
- <div class="rightcontent"> 
-    <p>Press any key to start!</p>
-    <div class="scoreTally">
-      <p id="wordDisplay"></p>
-      <p id="lettersGuessed"></p>
-      <p id="guessesRemaining"></p>
-      <p id="wins"></p>
-      <p id="losses"></p>
-
-</div>
-</div>
-
-
-<div class="leftcontent">
-
-    <img id="brazil0" src="" width="107" height="98">
-    <img id="china1" src="" width="107" height="98">
-    <img id="finland2" src="" width="107" height="98">
-    <img id="sweden3" src="" width="107" height="98">
-
-</div>
   
-<script type="text/javascript" src="../Word-Guess-Game/assets/javascript/game.js"></script>  
+  <div class="container">
+      <h1 class="HeaderTitle">Countries Word Game</h1>
+      <div id="lastWord"></div>
+      <p>Press any key to start!</p>
+      <div id="wordDisplay">...</div>
+      <div class="scoreTally">
+        <p id="guessedLetters"></p>
+        <p id="guessesRemaining"></p>
+        <p id="wins"></p>
+        <p id="losses"></p>
+      </div>
 
-<script>
-    startGame();
-    refreshScreen();
-</script>
   
+  </div>
+
+  <div class="images">
+
+      <img id="hmimg" src="" width="180" height="150">
+  
+  </div>
+
+  
+  <script src="./assets/javascript/game.js"></script>
 </body>
+
 </html>
