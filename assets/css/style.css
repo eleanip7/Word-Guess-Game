@@ -1,0 +1,16 @@
+body {
+    background-image: url("../images/worldmap.jpg");
+    background-repeat: repeat-x;
+}
+
+.jumbotron-fluid {
+    background-color: white;
+    text-align: center;
+    width: 50%;
+    margin-left: 300px;
+}
+
+.images {
+    margin-left: 480px;
+    
+}
