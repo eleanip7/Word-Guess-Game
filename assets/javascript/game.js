@@ -1,5 +1,5 @@
 var countryName = ["brazil", "china", "finland", "sweden"];
-var guessesRemaining = 12;
+var guessesRemaining = 10;
 var guessedLetters = [];
 var displayedWord = "";
 var wins = 0;
